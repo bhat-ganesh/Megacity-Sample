@@ -1,0 +1,12 @@
+name: Build Unity client
+
+on:
+  workflow_dispatch:
+
+jobs:
+    check-license:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Unity - Activate
+              uses: game-ci/unity-activate@v2.0.0
+        
