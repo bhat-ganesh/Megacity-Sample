@@ -1,0 +1,12 @@
+name: Sandbox Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+    sandbox:
+        runs-on: self-hosted
+        steps:
+            - name: Run
+              run: |
+                  echo "Hello World"
