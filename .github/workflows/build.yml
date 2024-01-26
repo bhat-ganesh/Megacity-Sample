@@ -12,7 +12,8 @@ jobs:
               with:
                 lfs: true
         
-            - uses: actions/cache@v3
+            - name: Cache Library folder
+              uses: actions/cache@v3
               with:
                 path: Library
                 key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
@@ -27,10 +28,11 @@ jobs:
                 UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}                
               with:
                 targetPlatform: StandaloneWindows64
-                # customImage: unityci/editor:ubuntu-2022.3.9f1-windows-mono-3.0.1
-                customImage: unityci/editor:windows-2022.3.9f1-windows-il2cpp-3.0.1
+                customImage: unityci/editor:ubuntu-2022.3.9f1-windows-mono-3.0.1
+                # customImage: unityci/editor:windows-2022.3.9f1-windows-il2cpp-3.0.1
       
-            - uses: actions/upload-artifact@v3
+            - name: Upload build artifact
+              uses: actions/upload-artifact@v3
               with:
                 name: Build
                 path: build
