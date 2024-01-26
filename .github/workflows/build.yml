@@ -36,7 +36,7 @@ jobs:
                 UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
               with:
                 targetPlatform: StandaloneWindows
-                dockerWorkspacePath: steps
+                dockerWorkspacePath: /steps
       
             - uses: actions/upload-artifact@v3
               with:
