@@ -5,7 +5,7 @@ on:
 
 jobs:
     build-unity:
-        runs-on: self-hosted
+        runs-on: [self-hosted, macOS]
         defaults:
           run:
             shell: bash
