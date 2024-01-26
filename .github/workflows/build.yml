@@ -36,7 +36,7 @@ jobs:
                 UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
               with:
                 targetPlatform: StandaloneWindows
-                dockerWorkspacePath: \tools\actions-runner\github\workspace
+                dockerWorkspacePath: steps
       
             - uses: actions/upload-artifact@v3
               with:
