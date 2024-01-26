@@ -10,3 +10,5 @@ jobs:
             - name: Run
               run: |
                   echo "Hello World"
+                  echo "GITHUB_WORKSPACE = ${{ GITHUB_WORKSPACE }}"
+                  echo "github.workspace = ${{ github.workspace }}"
